@@ -1,0 +1,17 @@
+# CODEOWNERS
+# These owners are automatically requested for review on any PR
+
+# Repository owner
+* https://github.com/Dipesh-sapkota1
+
+# Risk Management
+/risk-management/ https://github.com/Dipesh-sapkota1
+
+# Compliance
+/compliance/ https://github.com/Dipesh-sapkota1
+
+# Audit
+/audit/ https://github.com/Dipesh-sapkota1
+
+# Templates
+/templates/ https://github.com/Dipesh-sapkota1

@@ -1,0 +1,51 @@
+# Cybersecurity GRC Capstone — .gitignore
+
+# =====================
+# Sensitive Data
+# =====================
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets/
+credentials/
+private/
+.env
+.env.*
+
+# =====================
+# OS Files
+# =====================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =====================
+# Editor Files
+# =====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =====================
+# Build / Temp
+# =====================
+*.tmp
+*.bak
+*.log
+dist/
+build/
+node_modules/
+__pycache__/
+
+# =====================
+# Evidence / Artifacts with PII
+# Note: Store sensitive evidence in a separate,
+# access-controlled repository or DMS
+# =====================
+evidence/raw/
+evidence/personal/
