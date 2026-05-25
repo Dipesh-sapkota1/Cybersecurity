@@ -80,11 +80,11 @@ phishing-ir-playbook/
 
 | Situation | Go To |
 |---|---|
-| Phishing email just reported by a user | [Quick Reference Card](playbook/quick-reference-card.md) |
-| Full investigation underway | [Main Playbook](playbook/phishing-playbook.md) |
-| Need to log the incident | [Incident Ticket Template](templates/incident-ticket-template.md) |
-| Need to notify a user or manager | [Notification Templates](templates/notification-templates.md) |
-| Want to understand the response flow | [Incident Flow Diagram](diagrams/incident-response-flow.md) |
+| Phishing email just reported by a user | [Quick Reference Card](./quick-reference-card.md) |
+| Full investigation underway | [Main Playbook](./phishing-playbook.md) |
+| Need to log the incident | [Incident Ticket Template](./incident-ticket-template.md) |
+| Need to notify a user or manager | [Notification Templates](./notification-templates.md) |
+| Want to understand the response flow | [Incident Flow Diagram](./incident-response-flow.md) |
 
 ---
 
