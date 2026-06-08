@@ -4,7 +4,7 @@
 
 **Hands-on security projects built during professional training**
 
-[![Projects](https://img.shields.io/badge/Projects-4-0d1117?style=for-the-badge&labelColor=238636&color=0d1117)](.)
+[![Projects](https://img.shields.io/badge/Projects-5-0d1117?style=for-the-badge&labelColor=238636&color=0d1117)](.)
 [![Domains](https://img.shields.io/badge/Domains-4-0d1117?style=for-the-badge&labelColor=1f6feb&color=0d1117)](.)
 [![Framework](https://img.shields.io/badge/NIST%20SP%20800--61-Referenced-0d1117?style=for-the-badge&labelColor=8957e5&color=0d1117)](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)
 [![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-Referenced-0d1117?style=for-the-badge&labelColor=da3633&color=0d1117)](https://attack.mitre.org/)
@@ -29,8 +29,8 @@ Each project is grounded in real-world frameworks (NIST, MITRE ATT&CK, CIS Contr
 |---|---|
 | **GRC** | Security auditing, risk assessment, compliance gap analysis, control mapping (NIST CSF, PCI-DSS, GDPR), policy writing |
 | **Incident Response** | Phishing IR playbook, NIST lifecycle application, RACI mapping, severity classification, evidence handling |
+| **Incident Analysis** | Linux log forensics, SQL threat hunting, timeline reconstruction, root cause analysis, MITRE ATT&CK mapping |
 | **Network Security** | Packet capture analysis (Wireshark), baseline documentation, protocol hierarchy, traffic analysis |
-| **Incident Analysis** | Timeline reconstruction, root cause analysis, structured reporting |
 | **Documentation** | Technical writing, professional security documentation, template development |
 
 ---
@@ -43,7 +43,7 @@ Each project is grounded in real-world frameworks (NIST, MITRE ATT&CK, CIS Contr
 <tr>
 <td width="60%">
 
-#### [Botium Toys — Security Audit & Risk Assessment](GRC_report/botium_toys_audit_%26_risk_assessment/)
+#### [Botium Toys — Security Audit & Risk Assessment](GRC_report/botium_toys_audit_&_risk_assessment/)
 
 A full internal security audit of Botium Toys, a fictional e-commerce company. Covers control assessment, compliance gap analysis across PCI-DSS, GDPR, and SOC 2, NIST CSF maturity reporting, risk register, and policy documentation.
 
@@ -97,6 +97,32 @@ A complete, operational IR playbook for a fictional mid-size fintech company. Bu
 ---
 
 ### 🟡 Incident Analysis
+
+<table>
+<tr>
+<td width="60%">
+
+#### [Linux Forensics & SQL Threat Hunting — NovaStar Logistics](Incident_analysis/linux_forensics_sql_threat_hunting/)
+
+A hands-on forensic investigation of a confirmed server breach. Working from raw `auth.log` data and a web application database, I reconstructed the full attack chain from initial brute-force through persistence establishment and data exfiltration — the same workflow a SOC analyst or DFIR responder would follow. Identified 5 MITRE ATT&CK techniques across 2 attacker IPs, quantified 83.6 MB of exfiltrated data, and produced actionable containment and remediation guidance.
+
+**Artifacts:** Full investigation report · Attack timeline · SQL threat hunting queries · Containment procedures · MITRE ATT&CK mapping
+
+</td>
+<td width="40%" align="center">
+
+![IA](https://img.shields.io/badge/-Linux%20Forensics-b08800?style=flat-square)
+![IA](https://img.shields.io/badge/-SQL%20Threat%20Hunting-b08800?style=flat-square)
+![IA](https://img.shields.io/badge/-MITRE%20ATT%26CK-b08800?style=flat-square)
+![IA](https://img.shields.io/badge/-Brute%20Force-b08800?style=flat-square)
+![IA](https://img.shields.io/badge/-SQL%20Injection-b08800?style=flat-square)
+![IA](https://img.shields.io/badge/-Data%20Exfiltration-b08800?style=flat-square)
+
+**Status:** `Complete`
+
+</td>
+</tr>
+</table>
 
 <table>
 <tr>
@@ -169,6 +195,9 @@ Packet capture and analysis using Wireshark to establish a network baseline. Cov
 │       └── templates/                         Reusable audit & compliance templates
 │
 ├── Incident_analysis/
+│   ├── linux_forensics_sql_threat_hunting/    ← Linux forensics & SQL threat hunting (NEW)
+│   │   ├── README.md
+│   │   └── linux-forensics-sql-threat-hunting.md
 │   └── incident_timeline/                 ← Incident timeline reconstruction
 │
 ├── Network_security/
@@ -184,26 +213,18 @@ Packet capture and analysis using Wireshark to establish a network baseline. Cov
 
 | Framework | Applied In |
 |---|---|
-| [NIST SP 800-61 Rev. 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) — Incident Handling | Phishing Playbook |
+| [NIST SP 800-61 Rev. 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) — Incident Handling | Phishing Playbook · Linux Forensics |
 | [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework) | Botium Toys Audit |
-| [MITRE ATT&CK — T1566 Phishing](https://attack.mitre.org/techniques/T1566/) | Phishing Playbook |
-| [PCI-DSS v4.0](https://www.pcisecuritystandards.org) | Botium Toys Audit, Phishing Playbook |
-| [GDPR Article 33](https://gdpr-info.eu/art-33-gdpr/) | Botium Toys Audit, Phishing Playbook |
+| [MITRE ATT&CK — T1110, T1078, T1136, T1190, T1048](https://attack.mitre.org/) | Linux Forensics · Phishing Playbook |
+| [OWASP — SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection) | Linux Forensics & SQL Threat Hunting |
+| [PCI-DSS v4.0](https://www.pcisecuritystandards.org) | Botium Toys Audit · Phishing Playbook |
+| [GDPR Article 33](https://gdpr-info.eu/art-33-gdpr/) | Botium Toys Audit · Phishing Playbook · Linux Forensics |
 | [SOC 2 Trust Services Criteria](https://www.aicpa.org) | Botium Toys Audit |
 | [CIS Controls v8](https://www.cisecurity.org/controls/) | Botium Toys Controls Assessment |
 
 ---
 
-## Upcoming Projects
 
-*Projects currently in progress or planned:*
-
-- [ ] **Vulnerability Management Report** — CVE analysis, CVSS scoring, prioritization framework
-- [ ] **SIEM Lab** — Splunk alert rule development and threat detection use cases
-- [ ] **Network Hardening Plan** — Based on baseline analysis findings
-- [ ] **Security Awareness Training Program** — Employee training curriculum and phishing simulation plan
-
----
 
 ## How to Navigate This Repo
 
