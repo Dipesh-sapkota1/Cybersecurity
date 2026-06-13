@@ -98,11 +98,12 @@ The `mailto:` hyperlink is labeled "Report The User" but actually composes a pre
 
 ### URL Reputation Screenshot
 
-> **Screenshot Placeholder**
->
-> Insert URL reputation analysis screenshot here.
->
-> Example: VirusTotal, URLVoid, Cisco Talos, or similar reputation service.
+ ![Description of image](./images/virustotal.png/)
+ ![Description of image](./images/brightcloud.png/)
+ ![Description of image](./images/ciscotalos.png/)
+ ![Description of image](./images/site.png/)
+
+
 
 ---
 

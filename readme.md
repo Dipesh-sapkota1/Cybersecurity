@@ -4,7 +4,7 @@
 
 **Hands-on security projects built during professional training**
 
-[![Projects](https://img.shields.io/badge/Projects-5-0d1117?style=for-the-badge&labelColor=238636&color=0d1117)](.)
+[![Projects](https://img.shields.io/badge/Projects-6-0d1117?style=for-the-badge&labelColor=238636&color=0d1117)](.)
 [![Domains](https://img.shields.io/badge/Domains-4-0d1117?style=for-the-badge&labelColor=1f6feb&color=0d1117)](.)
 [![Framework](https://img.shields.io/badge/NIST%20SP%20800--61-Referenced-0d1117?style=for-the-badge&labelColor=8957e5&color=0d1117)](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)
 [![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-Referenced-0d1117?style=for-the-badge&labelColor=da3633&color=0d1117)](https://attack.mitre.org/)
@@ -147,6 +147,31 @@ Structured analysis and timeline reconstruction of a security incident. Document
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="60%">
+
+#### [Phishing Email Analysis — sample-10.eml](Incident_analysis/phishing_analysis/)
+
+Static forensic analysis of a real-world phishing email sourced from a public honeypot repository. The email impersonates the Microsoft account security team to create urgency and trick the recipient into clicking a malicious tracking URL. Covers full header inspection, sender infrastructure tracing, IOC extraction, and MITRE ATT&CK mapping.
+
+**Artifacts:** Analysis report · IOC table · MITRE ATT&CK mapping · Defanged URL documentation · URL reputation screenshots (VirusTotal, Cisco Talos, BrightCloud) · Email sample (SHA256 verified)
+
+</td>
+<td width="40%" align="center">
+
+![IA](https://img.shields.io/badge/-Phishing%20Analysis-b08800?style=flat-square)
+![IA](https://img.shields.io/badge/-Header%20Forensics-b08800?style=flat-square)
+![IA](https://img.shields.io/badge/-IOC%20Extraction-b08800?style=flat-square)
+![IA](https://img.shields.io/badge/-MITRE%20ATT%26CK-b08800?style=flat-square)
+![IA](https://img.shields.io/badge/-VirusTotal-b08800?style=flat-square)
+
+**Status:** `Complete`
+
+</td>
+</tr>
+</table>
+
 ---
 
 ### 🟣 Network Security
@@ -195,10 +220,20 @@ Packet capture and analysis using Wireshark to establish a network baseline. Cov
 │       └── templates/                         Reusable audit & compliance templates
 │
 ├── Incident_analysis/
-│   ├── linux_forensics_sql_threat_hunting/    ← Linux forensics & SQL threat hunting (NEW)
+│   ├── linux_forensics_sql_threat_hunting/    ← Linux forensics & SQL threat hunting
 │   │   ├── README.md
 │   │   └── linux-forensics-sql-threat-hunting.md
-│   └── incident_timeline/                 ← Incident timeline reconstruction
+│   ├── incident_timeline/                 ← Incident timeline reconstruction
+│   └── phishing_analysis/                 ← Phishing email forensics
+│       ├── README.md
+│       ├── Phishing_Analysis_Report.md
+│       ├── images/                        URL reputation screenshots
+│       │   ├── virustotal.png
+│       │   ├── ciscotalos.png
+│       │   ├── brightcloud.png
+│       │   └── site.png
+│       └── sample/
+│           └── sample-10.eml
 │
 ├── Network_security/
 │   └── Network_Baseline/                  ← Wireshark traffic baseline analysis
@@ -216,6 +251,7 @@ Packet capture and analysis using Wireshark to establish a network baseline. Cov
 | [NIST SP 800-61 Rev. 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) — Incident Handling | Phishing Playbook · Linux Forensics |
 | [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework) | Botium Toys Audit |
 | [MITRE ATT&CK — T1110, T1078, T1136, T1190, T1048](https://attack.mitre.org/) | Linux Forensics · Phishing Playbook |
+| [MITRE ATT&CK — T1566.001, T1566.002, T1598.003, T1204.001](https://attack.mitre.org/) | Phishing Email Analysis |
 | [OWASP — SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection) | Linux Forensics & SQL Threat Hunting |
 | [PCI-DSS v4.0](https://www.pcisecuritystandards.org) | Botium Toys Audit · Phishing Playbook |
 | [GDPR Article 33](https://gdpr-info.eu/art-33-gdpr/) | Botium Toys Audit · Phishing Playbook · Linux Forensics |
