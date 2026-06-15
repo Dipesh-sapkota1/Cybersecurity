@@ -1,6 +1,6 @@
 # 📧 Phishing Email Analysis – Capstone Project
 
-A beginner cybersecurity project analyzing a real-world phishing email sample. This repository documents the investigation process, findings, and indicators of compromise (IOCs) from a static email forensics exercise.
+A  cybersecurity project analyzing a real-world phishing email sample. This repository documents the investigation process, findings, and indicators of compromise (IOCs) from a static email forensics exercise.
 
 ---
 
