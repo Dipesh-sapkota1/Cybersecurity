@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# In a real (non-demo) engagement, the generated engagement data documents
+# working guardrail bypasses against a real target and should not be
+# committed. It's included in this repo only as a worked example against
+# a lab/fictional target — remove this exclusion if you fork this for an
+# actual client engagement and want to keep data local-only.
+# engagement_data/
