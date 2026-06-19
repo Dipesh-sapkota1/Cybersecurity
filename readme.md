@@ -4,8 +4,8 @@
 
 **Hands-on security projects built during professional training**
 
-[![Projects](https://img.shields.io/badge/Projects-6-0d1117?style=for-the-badge&labelColor=238636&color=0d1117)](.)
-[![Domains](https://img.shields.io/badge/Domains-4-0d1117?style=for-the-badge&labelColor=1f6feb&color=0d1117)](.)
+[![Projects](https://img.shields.io/badge/Projects-7-0d1117?style=for-the-badge&labelColor=238636&color=0d1117)](.)
+[![Domains](https://img.shields.io/badge/Domains-5-0d1117?style=for-the-badge&labelColor=1f6feb&color=0d1117)](.)
 [![Framework](https://img.shields.io/badge/NIST%20SP%20800--61-Referenced-0d1117?style=for-the-badge&labelColor=8957e5&color=0d1117)](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)
 [![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-Referenced-0d1117?style=for-the-badge&labelColor=da3633&color=0d1117)](https://attack.mitre.org/)
 
@@ -31,6 +31,7 @@ Each project is grounded in real-world frameworks (NIST, MITRE ATT&CK, CIS Contr
 | **Incident Response** | Phishing IR playbook, NIST lifecycle application, RACI mapping, severity classification, evidence handling |
 | **Incident Analysis** | Linux log forensics, SQL threat hunting, timeline reconstruction, root cause analysis, MITRE ATT&CK mapping |
 | **Network Security** | Packet capture analysis (Wireshark), baseline documentation, protocol hierarchy, traffic analysis |
+| **AI / LLM Security** | Manual prompt-injection testing, LLM guardrail assessment, instruction-hierarchy bypass analysis, risk rating, reproducible findings reporting |
 | **Documentation** | Technical writing, professional security documentation, template development |
 
 ---
@@ -202,11 +203,51 @@ Packet capture and analysis using Wireshark to establish a network baseline. Cov
 
 ---
 
+### 🟢 AI / LLM Security
+
+<table>
+<tr>
+<td width="60%">
+
+#### [Manual Prompt-Injection Assessment Toolkit](AI_Security/)
+
+A manual, budget-tracked LLM guardrail assessment against a constrained target — a web chat box with no public API, a 500-character input limit, and a rate limit capping the engagement at 6 total manual attempts. Tests cover system prompt disclosure, instruction override, policy bypass, indirect injection simulation, output constraint testing, and direct injection via forged authority. Findings are cross-referenced against Garak's published probe taxonomy for documentation purposes, and rendered into a client-ready Markdown report via a standalone Python script.
+
+**Artifacts:** Attempt log (JSON/CSV) · Final findings report · Standalone report generator (`report_generator.py`)
+
+</td>
+<td width="40%" align="center">
+
+![AI](https://img.shields.io/badge/-Prompt%20Injection-238636?style=flat-square)
+![AI](https://img.shields.io/badge/-LLM%20Guardrails-238636?style=flat-square)
+![AI](https://img.shields.io/badge/-Garak%20Taxonomy-238636?style=flat-square)
+![AI](https://img.shields.io/badge/-Risk%20Rating-238636?style=flat-square)
+![AI](https://img.shields.io/badge/-Python-238636?style=flat-square)
+
+**Status:** `Complete`
+
+</td>
+</tr>
+</table>
+
+---
+
 ## Repository Structure
 
 ```
 .
 ├── README.md                              ← You are here
+│
+├── AI_Security/                           ← Manual LLM prompt-injection assessment toolkit
+│   ├── README.md
+│   ├── audit_config.py                    Fixed 6-test suite, categories, risk scale, budget constants
+│   ├── audit_engine.py                    Budget tracking, attempt dispatch/capture, persistence
+│   ├── optional_garak_reference.py        Offline-only Garak taxonomy cross-reference
+│   ├── report_generator.py                Standalone report builder (engine-integrated + CLI)
+│   ├── run_audit.py                       CLI entry point (status / next / normalize / report)
+│   ├── attempt_log.json                   Logged attempts (sample data)
+│   ├── attempt_log.csv                    Spreadsheet-friendly mirror
+│   └── pentest_report.md                  Final rendered findings report
 │
 ├── GRC_report/
 │   └── botium_toys_audit_&_risk_assessment/   ← Full GRC audit project
