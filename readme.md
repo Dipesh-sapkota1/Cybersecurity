@@ -1,6 +1,6 @@
 <div align="center">
 
-# Cybersecurity Portfolio
+# Cybersecurity Bootcamp Exercise
 
 **Hands-on security projects built during professional training**
 
